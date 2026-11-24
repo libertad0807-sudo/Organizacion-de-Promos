@@ -1,0 +1,367 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: radial-gradient(circle at top left, #240046, #0b0014 60%);
+            background-attachment: fixed;
+            color: #e0d0f0;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic; /* Todos los textos normales en sans-serif cursiva */
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Tipografía especial para TODOS los Títulos */
+        h1, h2, h3, h4 {
+            font-family: 'Lobster', cursive; /* Fuente elegante manuscrita/display */
+            font-style: normal; /* Los títulos van con su propio estilo distintivo */
+            color: #d8b4fe; /* Morado claro brillante */
+            letter-spacing: 1px;
+        }
+
+       
+        header {
+            background-color: rgba(22, 0, 41, 0.85); /* Morado oscuro con transparencia */
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #7b2cbf;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+        }
+
+        #btnMenu {
+            background-color: #7b2cbf;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(123, 44, 191, 0.5);
+        }
+
+        #btnMenu:hover {
+            background-color: #9d4edd;
+        }
+
+        /* Menú desplegable */
+        .nav-links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #3c096c;
+        }
+
+        .nav-links a {
+            color: #e0d0f0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #3c096c;
+            color: #ffffff;
+            box-shadow: 0 0 10px rgba(157, 78, 221, 0.4);
+        }
+
+       
+        .oculto {
+            display: none !important;
+        }
+
+       
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(16, 0, 29, 0.9) 0%, rgba(36, 0, 70, 0.8) 50%, rgba(60, 9, 108, 0.9) 100%);
+            border: 2px solid #7b2cbf;
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 25px rgba(157, 78, 221, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(216, 180, 254, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #c77dff;
+        }
+
+        /* RELOJ DE CUENTA REGRESIVA */
+        .cuenta-regresiva-container {
+            background: rgba(18, 0, 30, 0.85);
+            border: 2px solid #9d4edd;
+            border-radius: 15px;
+            padding: 25px 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+            backdrop-filter: blur(8px);
+        }
+
+        .cuenta-regresiva-container h2 {
+            font-size: 2.3rem;
+            margin-bottom: 5px;
+        }
+
+        .cuenta-regresiva-container p.subtitulo {
+            color: #c77dff;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .reloj-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .reloj-bloque {
+            background: linear-gradient(180deg, #240046 0%, #10001d 100%);
+            border: 1px solid #7b2cbf;
+            border-radius: 12px;
+            padding: 15px 5px;
+            box-shadow: inset 0 0 10px rgba(157, 78, 221, 0.2), 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .reloj-numero {
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #e0aaff;
+            text-shadow: 0 0 8px rgba(224, 170, 255, 0.7);
+        }
+
+        .reloj-etiqueta {
+            font-size: 0.85rem;
+            color: #c77dff;
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
+        /* Cajas de Secciones */
+        .caja {
+            background-color: rgba(18, 0, 30, 0.75);
+            border: 1px solid #5a189a;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(6px);
+        }
+
+        .caja h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #7b2cbf;
+            padding-bottom: 8px;
+        }
+
+        
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .tarjeta-servicio {
+            background-color: rgba(26, 0, 41, 0.9);
+            border: 1px solid #7b2cbf;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .tarjeta-servicio:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(157, 78, 221, 0.4);
+        }
+
+        .tarjeta-servicio img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .tarjeta-servicio-info {
+            padding: 15px;
+        }
+
+        .tarjeta-servicio-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        
+        .grid-galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .foto-item {
+            background-color: rgba(26, 0, 41, 0.9);
+            border: 1px solid #5a189a;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .foto-item:hover {
+            transform: scale(1.02);
+            border-color: #9d4edd;
+        }
+
+        .foto-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .foto-info {
+            padding: 10px;
+            font-size: 0.95rem;
+        }
+
+        .foto-info strong {
+            color: #d8b4fe;
+        }
+
+       
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+            background-color: rgba(26, 0, 41, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #3c096c;
+        }
+
+        input {
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid #7b2cbf;
+            background-color: #0b0014;
+            color: #ffffff;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #e0aaff;
+            box-shadow: 0 0 8px rgba(157, 78, 221, 0.5);
+        }
+
+        button[type="submit"] {
+            background-color: #7b2cbf;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            transition: background 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #9d4edd;
+            box-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
+        }
+
+       
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: rgba(26, 0, 41, 0.9);
+            border-left: 4px solid #9d4edd;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .mensaje-confirmacion {
+            background-color: #240046;
+            color: #e0aaff;
+            border: 1px solid #9d4edd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(22, 0, 41, 0.9);
+            border-top: 2px solid #7b2cbf;
+            margin-top: 40px;
+            color: #c77dff;
+        }
+
+        /* Responsivo en pantallas pequeñas */
+        @media (max-width: 500px) {
+            .reloj-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Responsivo en pantallas grandes */
+        @media (min-width: 600px) {
+            #btnMenu {
+                display: none; /* Oculta el botón en pantallas grandes */
+            }
+            .nav-links {
+                display: flex !important;
+                flex-direction: row;
+                width: auto;
+                margin-top: 0;
+                padding-top: 0;
+                border-top: none;
+            }
+        }

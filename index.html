@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organización Promo 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importación de fuentes de Google Fonts (Lobster para títulos tipo manuscrito y Montserrat para sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    
+    <header>
+        <div class="logo">
+            <h1>🎉 Promo 2026</h1>
+        </div>
+        <button id="btnMenu">☰ Menú</button>
+        <nav id="menuNavegacion" class="nav-links oculto">
+            <a href="#cuenta-regresiva">Cuenta Regresiva</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#calendario">Calendario</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+       
+        <section class="hero">
+            <h1>El final de una etapa merece una gran celebración</h1>
+            <p>Ustedes ponen las ganas y el recuerdo. Nosotros organizamos cada detalle.</p>
+        </section>
+
+       
+        <section id="cuenta-regresiva" class="cuenta-regresiva-container">
+            <h2>⏳ Falta poco para el Viaje de Egresados</h2>
+            <p class="subtitulo">Contando los días para cambiar de aire juntos:</p>
+
+            <div class="reloj-grid">
+                <div class="reloj-bloque">
+                    <div id="dias" class="reloj-numero">00</div>
+                    <div class="reloj-etiqueta">Días</div>
+                </div>
+                <div class="reloj-bloque">
+                    <div id="horas" class="reloj-numero">00</div>
+                    <div class="reloj-etiqueta">Horas</div>
+                </div>
+                <div class="reloj-bloque">
+                    <div id="minutos" class="reloj-numero">00</div>
+                    <div class="reloj-etiqueta">Minutos</div>
+                </div>
+                <div class="reloj-bloque">
+                    <div id="segundos" class="reloj-numero">00</div>
+                    <div class="reloj-etiqueta">Segundos</div>
+                </div>
+            </div>
+        </section>
+
+        SERVICIOS 
+        <section id="servicios" class="caja">
+            <h2>Nuestros Servicios</h2>
+            <p>Propuestas a medida para hacer de su promo algo inolvidable:</p>
+            
+            <div class="grid-servicios">
+                <div class="tarjeta-servicio">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=500&q=80" alt="Fiesta de Egresados">
+                    <div class="tarjeta-servicio-info">
+                        <h3>Fiesta de Egresados</h3>
+                        <p>Locación, DJ, luces, ambientación y la mejor noche de pista con sus amigos.</p>
+                    </div>
+                </div>
+
+                <div class="tarjeta-servicio">
+                    <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?auto=format&fit=crop&w=500&q=80" alt="Viajes de Promo">
+                    <div class="tarjeta-servicio-info">
+                        <h3>Viajes de Promo</h3>
+                        <p>Escapadas, viajes a la naturaleza o días de playa para compartir y relajarse.</p>
+                    </div>
+                </div>
+
+                <div class="tarjeta-servicio">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80" alt="Encuentros">
+                    <div class="tarjeta-servicio-info">
+                        <h3>Encuentros & Previas</h3>
+                        <p>Cenas especiales, despedidas íntimas y reuniones con la identidad del grupo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALENDARIO DE ACTIVIDADes -->
+        <section id="calendario" class="caja">
+            <h2>📅 Calendario de Actividades</h2>
+            <p>Agendá las fechas importantes de la promo:</p>
+
+            <form id="formActividad">
+                <input type="text" id="actNombre" placeholder="Nombre de la actividad (ej: Venta de empanadas)" required>
+                <input type="text" id="actFecha" placeholder="Fecha u hora (ej: 15 de Noviembre)" required>
+                <button type="submit">Agregar al Calendario</button>
+            </form>
+
+            <h3>Próximos Eventos:</h3>
+            <ul id="listaActividades">
+                <!-- Se inyectan las actividades con JavaScript -->
+            </ul>
+        </section>
+
+        <!--  GALERÍA DE FOTOS -->
+        <section id="galeria" class="caja">
+            <h2>📷 Galería de Fotos</h2>
+            <p>Compartí los momentos de la promo:</p>
+
+            <form id="formFoto">
+                <input type="text" id="fotoAutor" placeholder="Tu Nombre" required>
+                <input type="text" id="fotoDesc" placeholder="Descripción de la foto" required>
+                <input type="text" id="fotoUrl" placeholder="Link de la Foto (Opcional)">
+                <button type="submit">Publicar Foto</button>
+            </form>
+
+            <h3>Galería de Recuerdos:</h3>
+            <div id="gridGaleria" class="grid-galeria">
+                <!-- Se inyectan las fotos con JavaScript -->
+            </div>
+        </section>
+
+        <!-- CONTACTO / PRESUPUESTO -->
+        <section id="contacto" class="caja">
+            <h2>✉️ Hablemos de su Promo</h2>
+            <p>Dejanos tus datos para enviarte una propuesta sin compromiso:</p>
+
+            <form id="formContacto">
+                <input type="text" id="contactoNombre" placeholder="Tu nombre o del referente" required>
+                <input type="text" id="contactoColegio" placeholder="Colegio / Institución" required>
+                <button type="submit">Enviar Solicitud</button>
+            </form>
+
+            <div id="mensajeContacto" class="mensaje-confirmacion oculto">
+                ¡Gracias! Recibimos tu consulta. Pronto nos pondremos en contacto.
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Organización de Promos. Hecho para celebrar juntos.</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="db.js"></script> 
+</body>
+</html>
